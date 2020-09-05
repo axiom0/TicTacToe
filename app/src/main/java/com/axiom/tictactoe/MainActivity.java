@@ -26,10 +26,21 @@ public class MainActivity extends AppCompatActivity {
         }else{
             ((ImageView)findViewById(boardID)).setImageResource(R.drawable.empty);
         }
+        int flag = ttt.checkBoardFlag();
+        if(flag==TicTacToe.WIN_RED || flag==TicTacToe.WIN_BLUE || flag == TicTacToe.DRAW){
+            showResult(flag);
+        }
     }
+
+    private void showResult(int flag){
+
+    }
+
     /*onClick methods 00 to 22 */
     public void onClick00(View view){
         Log.d(TAG, "MainActivity/onClick00");
+        int position = 0;
+        setImage(R.id.board00,ttt.updateBoard(position));
     }
 
     public void onClick01(View view){
