@@ -5,7 +5,7 @@ public class TicTacToe {
     *  0=00,1=01,2=02,3=10,4=11,5=12,6=20,7=21,8=22 */
     public int[] board = new int[9];
     int side = 1;
-    int turns = 0;
+    public int turns = 0;
     public static final int EMPTY = 0;
     public static final int RED = 1;
     public static final int BLUE = 2;
