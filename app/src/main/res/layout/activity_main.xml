@@ -12,99 +12,104 @@
         android:id="@+id/countLabal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Q1"
-        android:textSize="22sp"
+        android:text="@string/sideRed"
+        android:textSize="50sp"
         android:layout_marginTop="30dp"/>
 
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         >
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
             android:src="@drawable/board" />
 
         <ImageView
             android:id="@+id/board00"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:src="@drawable/cross"
+            android:contentDescription="@null"
+            android:layout_gravity="start"
+            android:src="@drawable/empty"
             />
 
         <ImageView
             android:id="@+id/board01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@null"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/cross"
+            android:src="@drawable/empty"
             />
 
         <ImageView
             android:id="@+id/board02"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:src="@drawable/cross"/>
+            android:contentDescription="@null"
+            android:layout_gravity="end"
+            android:src="@drawable/empty"/>
 
 
         <ImageView
             android:id="@+id/board10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@null"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/cross"
+            android:src="@drawable/empty"
             />
         <ImageView
             android:id="@+id/board11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@null"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="120dp"
-            android:src="@drawable/cross"
+            android:layout_marginStart="120dp"
+            android:src="@drawable/empty"
             />
 
         <ImageView
             android:id="@+id/board12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@null"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="240dp"
-            android:src="@drawable/cross"
+            android:layout_marginStart="240dp"
+            android:src="@drawable/empty"
             />
 
         <ImageView
             android:id="@+id/board20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@null"
             android:layout_gravity="bottom"
-            android:src="@drawable/cross"
+            android:src="@drawable/empty"
             />
         <ImageView
             android:id="@+id/board21"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@null"
             android:layout_gravity="bottom"
-            android:layout_marginLeft="120dp"
-            android:src="@drawable/cross"
+            android:layout_marginStart="120dp"
+            android:src="@drawable/empty"
             />
 
         <ImageView
             android:id="@+id/board22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@null"
             android:layout_gravity="bottom"
-            android:layout_marginLeft="240dp"
-            android:src="@drawable/cross"
+            android:layout_marginStart="240dp"
+            android:src="@drawable/empty"
             />
-
-
-
-
     </FrameLayout>
 
     <ImageView
