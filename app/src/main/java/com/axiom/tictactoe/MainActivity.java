@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
     private String TAG = "LOG-D";
+    public TicTacToe ttt = new TicTacToe();
 
 
     @Override
@@ -16,6 +18,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    private void setImage(int boardID, int side){
+        if(side == TicTacToe.RED){
+            ((ImageView)findViewById(boardID)).setImageResource(R.drawable.circle);
+        }else if(side == TicTacToe.BLUE){
+            ((ImageView)findViewById(boardID)).setImageResource(R.drawable.cross);
+        }else{
+            ((ImageView)findViewById(boardID)).setImageResource(R.drawable.empty);
+        }
+    }
+    /*onClick methods 00 to 22 */
     public void onClick00(View view){
         Log.d(TAG, "MainActivity/onClick00");
     }
