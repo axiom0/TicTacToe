@@ -1,15 +1,23 @@
 package com.axiom.tictactoe;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import static androidx.core.os.LocaleListCompat.create;
 
 public class MainActivity extends AppCompatActivity {
     private String TAG = "LOG-D";
+    private int[] boardIDs = {  R.id.board00,R.id.board01,R.id.board02,
+                                R.id.board10,R.id.board11,R.id.board12,
+                                R.id.board20,R.id.board21,R.id.board22  };
     public TicTacToe ttt = new TicTacToe();
 
 
@@ -40,6 +48,25 @@ public class MainActivity extends AppCompatActivity {
 
     private void showResult(int flag){
         Log.d(TAG, "Result: "+flag);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        if(flag==TicTacToe.WIN_RED){
+            builder.setMessage(R.string.result_message_red);
+        }else if(flag==TicTacToe.WIN_BLUE){
+            builder.setMessage(R.string.result_message_blue);
+        }else{
+            builder.setMessage(R.string.result_message_draw);
+        }
+        builder.setPositiveButton(R.string.new_game, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int j) {
+                ttt = new TicTacToe();
+                ((TextView)findViewById(R.id.countLabal)).setText(R.string.sideRed);
+                for(int i=0;i<9;i++){
+                    ((ImageView)findViewById(boardIDs[i])).setImageResource(R.drawable.empty);
+                }
+            }
+        });
+        builder.show();
     }
 
 

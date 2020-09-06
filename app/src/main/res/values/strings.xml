@@ -2,4 +2,8 @@
     <string name="app_name">TicTacToe</string>
     <string name="sideRed">Red Turn</string>
     <string name="sideBlue">Blue Turn</string>
+    <string name="result_message_red">Red Win!</string>
+    <string name="result_message_blue">Blue Win!</string>
+    <string name="result_message_draw">Draw&#8230;</string>
+    <string name="new_game">NEW GAME</string>
 </resources>
