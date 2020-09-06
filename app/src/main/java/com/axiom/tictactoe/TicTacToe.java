@@ -1,5 +1,7 @@
 package com.axiom.tictactoe;
 
+import android.util.Log;
+
 public class TicTacToe {
     /*  board 0=empty 1=circle(red) 2=cross(blue)
     *  0=00,1=01,2=02,3=10,4=11,5=12,6=20,7=21,8=22 */
@@ -48,12 +50,13 @@ public class TicTacToe {
         int flag;
 
         int c = board[4];
-        if((board[0]==board[1] && board[0]==board[2])||(board[0]==board[3] && board[0]==board[6])){
+
+        if(((board[0]==board[1] && board[0]==board[2])||(board[0]==board[3] && board[0]==board[6])) && (board[0]!=EMPTY)){
             flag=convertWin(board[0]);
-        }else if((board[8]==board[7] && board[8]==board[6])||(board[8]==board[5] && board[8]==board[2])){
+        }else if(((board[8]==board[7] && board[8]==board[6])||(board[8]==board[5] && board[8]==board[2])) && (board[8]!=EMPTY)){
             flag=convertWin(board[8]);
-        }else if( (c==board[0]&&c==board[8]) || (c==board[2]&&c==board[6])
-                            || (c==board[1]&&c==board[7]) || (c==board[3]&&c==board[5]) ){
+        }else if(( (c==board[0]&&c==board[8]) || (c==board[2]&&c==board[6])
+                || (c==board[1]&&c==board[7]) || (c==board[3]&&c==board[5]) )&& (c!=EMPTY)){
             flag=convertWin(c);
         }//WIN
         else if(turns>=9){
