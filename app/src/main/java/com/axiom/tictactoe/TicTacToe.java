@@ -6,8 +6,8 @@ public class TicTacToe {
     /*  board 0=empty 1=circle(red) 2=cross(blue)
     *  0=00,1=01,2=02,3=10,4=11,5=12,6=20,7=21,8=22 */
     public int[] board = new int[9];
-    int side = 1;
-    public int turns = 0;
+    int side = RED;
+    public int turnCount = 0;
     public static final int EMPTY = 0;
     public static final int RED = 1;
     public static final int BLUE = 2;
@@ -38,7 +38,7 @@ public class TicTacToe {
         int tmp = board[position];
         if(tmp==EMPTY){
             board[position] = side;
-            turns++;
+            turnCount++;
             changeSide();
         }
 
@@ -59,7 +59,7 @@ public class TicTacToe {
                 || (c==board[1]&&c==board[7]) || (c==board[3]&&c==board[5]) )&& (c!=EMPTY)){
             flag=convertWin(c);
         }//WIN
-        else if(turns>=9){
+        else if(turnCount>=9){
             flag=DRAW;
         }//DRAW
         else{
