@@ -15,15 +15,15 @@ public class StartActivity extends AppCompatActivity {
     }
 
     public void startOffline(View view){
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        Intent intent = new Intent(getApplicationContext(), OfflineActivity.class);
         startActivity(intent);
     }
     public void startCPU(View view){
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        Intent intent = new Intent(getApplicationContext(), CpuActivity.class);
         startActivity(intent);
     }
     public void startOnline(View view){
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        Intent intent = new Intent(getApplicationContext(), OnlineActivity.class);
         startActivity(intent);
     }
 }
