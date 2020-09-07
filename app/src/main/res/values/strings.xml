@@ -10,4 +10,8 @@
     <string name="offline">OFFLINE</string>
     <string name="cpu">vs CPU</string>
     <string name="online">ONLINE</string>
+    <string-array name="side_array">
+        <item>先手</item>
+        <item>後手</item>
+    </string-array>
 </resources>
