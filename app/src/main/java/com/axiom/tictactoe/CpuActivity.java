@@ -3,6 +3,7 @@ package com.axiom.tictactoe;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 
 public class CpuActivity extends Board {
     private int playerTurn;
@@ -12,7 +13,7 @@ public class CpuActivity extends Board {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        playerTurn = getIntent().getIntExtra("PL_NAME", TicTacToe.RED);
+        playerTurn = getIntent().getIntExtra("PL_TURN", TicTacToe.RED);
     }
 
 

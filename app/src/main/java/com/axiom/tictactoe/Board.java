@@ -41,7 +41,7 @@ public class Board extends AppCompatActivity {
         if(flag==TicTacToe.WIN_RED || flag==TicTacToe.WIN_BLUE || flag == TicTacToe.DRAW){
             showResult(flag);
         }
-        if(ttt.turns%2==0){
+        if(ttt.turnCount%2==0){
             ((TextView)findViewById(R.id.countLabal)).setText(R.string.sideRed);
         }else{
             ((TextView)findViewById(R.id.countLabal)).setText(R.string.sideBlue);

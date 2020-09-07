@@ -4,25 +4,28 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Spinner;
 
 public class StartActivity extends AppCompatActivity {
     private String playerTurnStr;
-    private String[] sideArray = getResources().getStringArray(R.array.side_array);
+    private String[] sideArray;
     private int playerTurn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+        sideArray = getResources().getStringArray(R.array.side_array);
 
         Spinner spinner = findViewById(R.id.spinner);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 playerTurnStr = (String)adapterView.getItemAtPosition(i);
+
                 if(playerTurnStr.equals(sideArray[0])){
                     playerTurn = TicTacToe.RED;
                 }else if(playerTurnStr.equals(sideArray[1])){
