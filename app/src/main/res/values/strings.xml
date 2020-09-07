@@ -5,7 +5,8 @@
     <string name="result_message_red">Red Win!</string>
     <string name="result_message_blue">Blue Win!</string>
     <string name="result_message_draw">Draw&#8230;</string>
-    <string name="new_game">NEW GAME</string>
+    <string name="new_game">Restart</string>
+    <string name="back2menu">Back to Menu</string>
     <string name="offline">OFFLINE</string>
     <string name="cpu">vs CPU</string>
     <string name="online">ONLINE</string>

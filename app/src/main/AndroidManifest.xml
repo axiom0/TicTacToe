@@ -12,7 +12,7 @@
         android:fullBackupContent="true">
         <activity android:name=".OnlineActivity"/>
         <activity android:name=".CpuActivity" />
-        <activity android:name=".OfflineActivity" />
+        <activity android:name=".OfflineActivity"/>
         <activity android:name=".StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
