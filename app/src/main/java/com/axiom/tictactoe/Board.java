@@ -36,16 +36,19 @@ public class Board extends AppCompatActivity {
     }
 
 
-    protected void checkEnd(){
+    protected boolean checkEnd(){
+        boolean end = false;
         int flag = ttt.checkBoardFlag();
         if(flag==TicTacToe.WIN_RED || flag==TicTacToe.WIN_BLUE || flag == TicTacToe.DRAW){
             showResult(flag);
+            end = true;
         }
         if(ttt.turnCount%2==0){
             ((TextView)findViewById(R.id.countLabal)).setText(R.string.sideRed);
         }else{
             ((TextView)findViewById(R.id.countLabal)).setText(R.string.sideBlue);
         }
+        return end;
     }
 
     protected void showResult(int flag){
@@ -73,7 +76,7 @@ public class Board extends AppCompatActivity {
         builder.show();
     }
 
-    private void resetBoard(){
+    protected void resetBoard(){
         ttt = new TicTacToe();
         ((TextView)findViewById(R.id.countLabal)).setText(R.string.sideRed);
         for(int i=0;i<9;i++){

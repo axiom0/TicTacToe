@@ -2,6 +2,9 @@ package com.axiom.tictactoe;
 
 import android.util.Log;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 public class TicTacToe {
     /*  board 0=empty 1=circle(red) 2=cross(blue)
     *  0=00,1=01,2=02,3=10,4=11,5=12,6=20,7=21,8=22 */
@@ -77,6 +80,22 @@ public class TicTacToe {
         }
 
         return t;
+    }
+
+    public int randomCpu(){
+        if(turnCount >= 9) return 0;
+        Random rand = new Random();
+        int r = rand.nextInt(9-turnCount);
+        int[] arr = new int[9-turnCount];
+        int j = 0;
+        for(int i=0;i<9;i++){
+            if(board[i]==EMPTY){
+                arr[j] = i;
+                j++;
+            }
+        }
+
+        return arr[r];
     }
 
 }
